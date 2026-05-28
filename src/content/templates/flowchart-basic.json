@@ -1,0 +1,23 @@
+{
+  "slug": "flowchart-basic",
+  "title": "Basic Flowchart",
+  "description": "A simple flowchart template for documenting processes and workflows. Perfect for beginners.",
+  "category": "flowchart",
+  "tags": ["flowchart", "process", "workflow", "beginner"],
+  "seoTitle": "Free Online Flowchart Template - Create Flowcharts Instantly",
+  "seoDescription": "Use this free flowchart template to create professional process diagrams online. No signup required. Export as PNG or SVG.",
+  "keywords": ["flowchart template", "free flowchart maker", "process diagram", "workflow chart"],
+  "excalidrawData": {
+    "type": "excalidraw",
+    "version": 2,
+    "elements": [
+      {"type": "rectangle", "x": 200, "y": 50, "width": 150, "height": 60, "strokeColor": "#1e1e1e", "backgroundColor": "#a5d8ff", "label": {"text": "Start"}},
+      {"type": "rectangle", "x": 200, "y": 180, "width": 150, "height": 60, "strokeColor": "#1e1e1e", "backgroundColor": "#b2f2bb", "label": {"text": "Process"}},
+      {"type": "diamond", "x": 200, "y": 310, "width": 150, "height": 100, "strokeColor": "#1e1e1e", "backgroundColor": "#ffec99", "label": {"text": "Decision"}},
+      {"type": "rectangle", "x": 200, "y": 480, "width": 150, "height": 60, "strokeColor": "#1e1e1e", "backgroundColor": "#ffc9c9", "label": {"text": "End"}}
+    ]
+  },
+  "locale": "en",
+  "createdAt": "2024-01-01",
+  "updatedAt": "2024-01-01"
+}
