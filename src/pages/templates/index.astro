@@ -1,0 +1,40 @@
+---
+// src/pages/templates/index.astro — 模板分类总览页
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import TemplateCard from '../../components/TemplateCard.astro'
+import { getCollection } from 'astro:content'
+import { categories } from '../../data/categories'
+import { buildItemListSchema } from '../../utils/seo'
+import type { SeoMeta } from '../../utils/seo'
+
+const allTemplates = await getCollection('templates')
+
+const seo: SeoMeta = {
+  title: 'Free Whiteboard Templates - Excalidraw Hub',
+  description: 'Browse our collection of free whiteboard templates. Flowcharts, mind maps, wireframes and more.',
+  keywords: ['whiteboard templates', 'free templates', 'flowchart template', 'mind map template'],
+  schema: buildItemListSchema(allTemplates.map((t) => ({ name: t.data.title, url: `https://excalidraw-hub.com/template/${t.data.slug}` }))),
+}
+---
+
+<BaseLayout seo={seo}>
+  <section class="max-w-7xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold text-gray-900 mb-8">Templates</h1>
+
+    <!-- 分类导航 -->
+    <div class="flex gap-3 mb-8 flex-wrap">
+      {categories.map((cat) => (
+        <a href={`/templates/${cat.slug}`} class="px-4 py-2 rounded-full border border-gray-200 hover:border-brand hover:text-brand transition-colors">
+          {cat.icon} {cat.name}
+        </a>
+      ))}
+    </div>
+
+    <!-- 模板网格 -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {allTemplates.map((tpl) => (
+        <TemplateCard title={tpl.data.title} description={tpl.data.description} slug={tpl.data.slug} category={tpl.data.category} />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

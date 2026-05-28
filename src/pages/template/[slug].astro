@@ -1,0 +1,84 @@
+---
+// src/pages/template/[slug].astro — 模板详情/落地页（Programmatic SEO 核心）
+import LandingLayout from '../../layouts/LandingLayout.astro'
+import { getCollection } from 'astro:content'
+import { getCategoryById } from '../../data/categories'
+import type { SeoMeta } from '../../utils/seo'
+
+export async function getStaticPaths() {
+  const templates = await getCollection('templates')
+  return templates.map((tpl) => ({
+    params: { slug: tpl.data.slug },
+    props: { template: tpl.data },
+  }))
+}
+
+const { template } = Astro.props
+const category = getCategoryById(template.category)
+
+const seo: SeoMeta = {
+  title: template.seoTitle,
+  description: template.seoDescription,
+  keywords: template.keywords,
+  ogType: 'article',
+  hreflang: [
+    { lang: 'en', url: `https://excalidraw-hub.com/template/${template.slug}` },
+    { lang: 'zh', url: `https://excalidraw-hub.com/zh/template/${template.slug}` },
+  ],
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: template.title,
+    description: template.seoDescription,
+    applicationCategory: 'DesignApplication',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  },
+}
+---
+
+<LandingLayout seo={seo}>
+  <!-- 面包屑 -->
+  <nav class="text-sm text-gray-500 mb-4">
+    <a href="/" class="hover:text-brand">Home</a> /
+    <a href="/templates" class="hover:text-brand">Templates</a> /
+    <span class="text-gray-900">{template.title}</span>
+  </nav>
+
+  <!-- 标题 -->
+  <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{template.seoTitle}</h1>
+
+  <!-- 分类标签 -->
+  {category && (
+    <span class="inline-block px-3 py-1 bg-brand/10 text-brand rounded-full text-sm mb-6">
+      {category.icon} {category.name}
+    </span>
+  )}
+
+  <!-- 模板预览占位 -->
+  <div class="aspect-video bg-gray-100 rounded-xl border border-gray-200 flex items-center justify-center mb-8">
+    <span class="text-6xl text-gray-300">📋</span>
+  </div>
+
+  <!-- 描述文案（SEO 内容） -->
+  <div class="prose max-w-none mb-8">
+    <p>{template.description}</p>
+    <h2>How to Use This Template</h2>
+    <ol>
+      <li>Click "Use This Template" to open it in the editor</li>
+      <li>Customize the content, colors, and layout</li>
+      <li>Export as PNG, SVG, or share a link</li>
+    </ol>
+  </div>
+
+  <!-- CTA 按钮 -->
+  <a href={`/editor?template=${template.slug}`} class="inline-block bg-brand text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-brand-dark transition-colors">
+    Use This Template →
+  </a>
+
+  <!-- 标签 -->
+  <div class="mt-8 flex gap-2 flex-wrap">
+    {template.tags.map((tag: string) => (
+      <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-sm">{tag}</span>
+    ))}
+  </div>
+</LandingLayout>
