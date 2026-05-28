@@ -5,7 +5,7 @@ import tailwind from '@astrojs/tailwind'
 import sitemap from '@astrojs/sitemap'
 
 export default defineConfig({
-  site: 'https://excalidraw-hub.com',
+  site: 'https://draw.todonot.com',
   integrations: [
     react(),
     tailwind(),

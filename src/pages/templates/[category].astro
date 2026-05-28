@@ -1,0 +1,46 @@
+---
+// src/pages/templates/[category].astro — 模板分类页面（修复 #11: 分类页404）
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import TemplateCard from '../../components/TemplateCard.astro'
+import Icon from '../../components/Icon.astro'
+import { getCollection } from 'astro:content'
+import { categories, getCategoryById } from '../../data/categories'
+import type { SeoMeta } from '../../utils/seo'
+
+export function getStaticPaths() {
+  return categories.map((cat) => ({
+    params: { category: cat.slug },
+    props: { category: cat },
+  }))
+}
+
+const { category } = Astro.props
+const allTemplates = await getCollection('templates')
+const filtered = allTemplates.filter((t) => t.data.category === category.id)
+
+const seo: SeoMeta = {
+  title: `${category.name} Templates - Excalidraw Hub`,
+  description: `Free ${category.name.toLowerCase()} templates. ${category.description}.`,
+  keywords: [`${category.name.toLowerCase()} template`, 'free template', 'excalidraw'],
+}
+---
+
+<BaseLayout seo={seo}>
+  <section class="max-w-7xl mx-auto px-4 py-12">
+    <div class="flex items-center gap-2 mb-8">
+      <Icon name={category.icon} size={28} />
+      <h1 class="text-3xl font-bold text-gray-900">{category.name}</h1>
+    </div>
+    <p class="text-gray-600 mb-8">{category.description}</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {filtered.map((tpl) => (
+        <TemplateCard title={tpl.data.title} description={tpl.data.description} slug={tpl.data.slug} category={tpl.data.category} elements={tpl.data.excalidrawData?.elements} />
+      ))}
+    </div>
+
+    {filtered.length === 0 && (
+      <p class="text-gray-500 text-center py-12">No templates in this category yet.</p>
+    )}
+  </section>
+</BaseLayout>

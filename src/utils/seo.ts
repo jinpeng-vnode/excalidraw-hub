@@ -29,7 +29,7 @@ export function buildAppSchema(): SchemaOrgData {
     applicationCategory: 'DesignApplication',
     operatingSystem: 'Web',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-    url: 'https://excalidraw-hub.com',
+    url: 'https://draw.todonot.com',
   }
 }
 

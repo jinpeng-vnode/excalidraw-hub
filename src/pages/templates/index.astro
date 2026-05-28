@@ -14,7 +14,7 @@ const seo: SeoMeta = {
   title: 'Free Whiteboard Templates - Excalidraw Hub',
   description: 'Browse our collection of free whiteboard templates. Flowcharts, mind maps, wireframes and more.',
   keywords: ['whiteboard templates', 'free templates', 'flowchart template', 'mind map template'],
-  schema: buildItemListSchema(allTemplates.map((t) => ({ name: t.data.title, url: `https://excalidraw-hub.com/template/${t.data.slug}` }))),
+  schema: buildItemListSchema(allTemplates.map((t) => ({ name: t.data.title, url: `https://draw.todonot.com/template/${t.data.slug}` }))),
 }
 ---
 
@@ -34,7 +34,7 @@ const seo: SeoMeta = {
     <!-- 模板网格 -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       {allTemplates.map((tpl) => (
-        <TemplateCard title={tpl.data.title} description={tpl.data.description} slug={tpl.data.slug} category={tpl.data.category} />
+        <TemplateCard title={tpl.data.title} description={tpl.data.description} slug={tpl.data.slug} category={tpl.data.category} elements={tpl.data.excalidrawData?.elements} />
       ))}
     </div>
   </section>

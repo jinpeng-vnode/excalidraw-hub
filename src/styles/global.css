@@ -7,4 +7,9 @@
   body {
     @apply text-gray-900 antialiased;
   }
+  /* 修复 #10: Tailwind Preflight 将 svg 设为 block 导致 Excalidraw 工具栏图标异常放大 */
+  .excalidraw svg {
+    display: inline;
+    vertical-align: baseline;
+  }
 }
