@@ -5,38 +5,36 @@ import TemplateCard from '../../components/TemplateCard.astro'
 import { getCollection } from 'astro:content'
 import type { SeoMeta } from '../../utils/seo'
 
-// 用途定义
-const useCases = [
-  {
-    slug: 'flowchart-maker',
-    title: 'Free Online Flowchart Maker',
-    description: 'Create professional flowcharts and process diagrams online for free. No signup required. Export as PNG or SVG.',
-    keywords: ['flowchart maker', 'free flowchart tool', 'online flowchart', 'process diagram maker'],
-    category: 'flowchart',
-    content: 'Excalidraw Hub provides a powerful yet simple flowchart maker that lets you create professional process diagrams in minutes. Whether you need to document a business process, design a software architecture, or plan a project workflow, our tool has you covered.',
-    features: ['Drag-and-drop interface', 'Pre-built flowchart shapes', 'Export to PNG, SVG, or clipboard', 'No account required', 'Works offline'],
-  },
-  {
-    slug: 'mind-map-tool',
-    title: 'Free Online Mind Map Tool',
-    description: 'Brainstorm and organize ideas with our free online mind map tool. Create beautiful mind maps instantly.',
-    keywords: ['mind map tool', 'free mind map', 'online brainstorming', 'idea organizer'],
-    category: 'mindmap',
-    content: 'Organize your thoughts and ideas visually with Excalidraw Hub mind map tool. Perfect for brainstorming sessions, project planning, and study notes. Our hand-drawn style makes your mind maps unique and engaging.',
-    features: ['Infinite canvas', 'Hand-drawn aesthetic', 'Real-time collaboration', 'Multiple export formats', 'Template library'],
-  },
-  {
-    slug: 'wireframe-tool',
-    title: 'Free Online Wireframe Tool',
-    description: 'Design web and mobile wireframes online for free. Quick prototyping with no learning curve.',
-    keywords: ['wireframe tool', 'free wireframe', 'UI mockup tool', 'prototype design'],
-    category: 'wireframe',
-    content: 'Design web and mobile wireframes quickly with Excalidraw Hub. Our sketch-style wireframes are perfect for early-stage design discussions. Share ideas with your team without spending hours on pixel-perfect mockups.',
-    features: ['UI component library', 'Responsive design templates', 'Quick prototyping', 'Team sharing', 'Version history'],
-  },
-]
-
 export function getStaticPaths() {
+  const useCases = [
+    {
+      slug: 'flowchart-maker',
+      title: 'Free Online Flowchart Maker',
+      description: 'Create professional flowcharts and process diagrams online for free. No signup required. Export as PNG or SVG.',
+      keywords: ['flowchart maker', 'free flowchart tool', 'online flowchart', 'process diagram maker'],
+      category: 'flowchart',
+      content: 'Excalidraw Hub provides a powerful yet simple flowchart maker that lets you create professional process diagrams in minutes. Whether you need to document a business process, design a software architecture, or plan a project workflow, our tool has you covered.',
+      features: ['Drag-and-drop interface', 'Pre-built flowchart shapes', 'Export to PNG, SVG, or clipboard', 'No account required', 'Works offline'],
+    },
+    {
+      slug: 'mind-map-tool',
+      title: 'Free Online Mind Map Tool',
+      description: 'Brainstorm and organize ideas with our free online mind map tool. Create beautiful mind maps instantly.',
+      keywords: ['mind map tool', 'free mind map', 'online brainstorming', 'idea organizer'],
+      category: 'mindmap',
+      content: 'Organize your thoughts and ideas visually with Excalidraw Hub mind map tool. Perfect for brainstorming sessions, project planning, and study notes. Our hand-drawn style makes your mind maps unique and engaging.',
+      features: ['Infinite canvas', 'Hand-drawn aesthetic', 'Real-time collaboration', 'Multiple export formats', 'Template library'],
+    },
+    {
+      slug: 'wireframe-tool',
+      title: 'Free Online Wireframe Tool',
+      description: 'Design web and mobile wireframes online for free. Quick prototyping with no learning curve.',
+      keywords: ['wireframe tool', 'free wireframe', 'UI mockup tool', 'prototype design'],
+      category: 'wireframe',
+      content: 'Design web and mobile wireframes quickly with Excalidraw Hub. Our sketch-style wireframes are perfect for early-stage design discussions. Share ideas with your team without spending hours on pixel-perfect mockups.',
+      features: ['UI component library', 'Responsive design templates', 'Quick prototyping', 'Team sharing', 'Version history'],
+    },
+  ]
   return useCases.map((uc) => ({
     params: { slug: uc.slug },
     props: { useCase: uc },
