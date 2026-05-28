@@ -1,0 +1,37 @@
+{
+  "site": {
+    "title": "Excalidraw Hub - 免费在线白板工具",
+    "description": "免费在线白板和图表绘制工具。使用 Excalidraw 创建流程图、思维导图、线框图等。"
+  },
+  "nav": {
+    "home": "首页",
+    "editor": "打开编辑器",
+    "templates": "模板库",
+    "useCases": "使用场景"
+  },
+  "home": {
+    "hero": "免费在线白板 & 图表绘制工具",
+    "heroSub": "即时创建精美的图表、流程图和草图。无需注册。",
+    "cta": "开始绘图",
+    "templates": "热门模板",
+    "viewAll": "查看全部模板"
+  },
+  "editor": {
+    "title": "白板编辑器",
+    "loading": "编辑器加载中...",
+    "error": "编辑器加载失败，请刷新页面。",
+    "templateLoaded": "模板加载成功"
+  },
+  "templates": {
+    "title": "模板库",
+    "description": "浏览我们的免费白板模板合集",
+    "useTemplate": "使用此模板",
+    "related": "相关模板"
+  },
+  "footer": {
+    "copyright": "© 2024 Excalidraw Hub. 保留所有权利。",
+    "about": "关于",
+    "privacy": "隐私政策",
+    "terms": "使用条款"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "site": {
+    "title": "Excalidraw Hub - Free Online Whiteboard Tool",
+    "description": "Free online whiteboard and diagramming tool. Create flowcharts, mind maps, wireframes and more with Excalidraw."
+  },
+  "nav": {
+    "home": "Home",
+    "editor": "Open Editor",
+    "templates": "Templates",
+    "useCases": "Use Cases"
+  },
+  "home": {
+    "hero": "Free Online Whiteboard & Diagramming Tool",
+    "heroSub": "Create beautiful diagrams, flowcharts, and sketches instantly. No signup required.",
+    "cta": "Start Drawing",
+    "templates": "Popular Templates",
+    "viewAll": "View All Templates"
+  },
+  "editor": {
+    "title": "Whiteboard Editor",
+    "loading": "Loading editor...",
+    "error": "Editor failed to load. Please refresh.",
+    "templateLoaded": "Template loaded successfully"
+  },
+  "templates": {
+    "title": "Templates",
+    "description": "Browse our collection of free whiteboard templates",
+    "useTemplate": "Use This Template",
+    "related": "Related Templates"
+  },
+  "footer": {
+    "copyright": "© 2024 Excalidraw Hub. All rights reserved.",
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  }
+}
