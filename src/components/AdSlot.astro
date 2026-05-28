@@ -1,0 +1,12 @@
+---
+// src/components/AdSlot.astro — 广告位预留组件
+interface Props {
+  slot: 'sidebar' | 'footer' | 'banner'
+}
+
+const { slot } = Astro.props
+---
+
+<div class="ad-slot" data-ad-slot={slot} aria-hidden="true">
+  <!-- 广告位预留：{slot} -->
+</div>

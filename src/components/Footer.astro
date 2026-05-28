@@ -1,0 +1,33 @@
+---
+// src/components/Footer.astro — 页脚（SEO 内链 + 版权）
+import { t, getLocaleFromUrl, getLocalizedPath } from '../i18n/utils'
+import type { Locale } from '../i18n/utils'
+
+const locale = getLocaleFromUrl(Astro.url) as Locale
+---
+
+<footer class="bg-gray-50 border-t border-gray-200 mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <!-- SEO 内链 -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-2">{t(locale, 'nav.templates')}</h3>
+        <ul class="space-y-1 text-sm text-gray-600">
+          <li><a href={getLocalizedPath('/templates', locale)} class="hover:text-brand">Flowcharts</a></li>
+          <li><a href={getLocalizedPath('/templates', locale)} class="hover:text-brand">Mind Maps</a></li>
+          <li><a href={getLocalizedPath('/templates', locale)} class="hover:text-brand">Wireframes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-2">{t(locale, 'nav.useCases')}</h3>
+        <ul class="space-y-1 text-sm text-gray-600">
+          <li><a href={getLocalizedPath('/use-cases/flowchart-maker', locale)} class="hover:text-brand">Flowchart Maker</a></li>
+          <li><a href={getLocalizedPath('/use-cases/mind-map-tool', locale)} class="hover:text-brand">Mind Map Tool</a></li>
+          <li><a href={getLocalizedPath('/use-cases/wireframe-tool', locale)} class="hover:text-brand">Wireframe Tool</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- 版权 -->
+    <p class="text-center text-sm text-gray-500">{t(locale, 'footer.copyright')}</p>
+  </div>
+</footer>

@@ -1,0 +1,27 @@
+---
+// src/components/Header.astro — 顶部导航栏（品牌 Logo + 导航）
+import { t, getLocaleFromUrl, getLocalizedPath } from '../i18n/utils'
+import type { Locale } from '../i18n/utils'
+
+const locale = getLocaleFromUrl(Astro.url) as Locale
+---
+
+<header class="sticky top-0 z-50 bg-white border-b border-gray-200">
+  <nav class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
+    <!-- 品牌 Logo -->
+    <a href={getLocalizedPath('/', locale)} class="flex items-center gap-2 font-bold text-xl text-brand">
+      <img src="/favicon.svg" alt="Excalidraw Hub" class="w-8 h-8" />
+      <span>Excalidraw Hub</span>
+    </a>
+
+    <!-- 导航链接 -->
+    <div class="flex items-center gap-6">
+      <a href={getLocalizedPath('/templates', locale)} class="text-gray-600 hover:text-brand transition-colors">
+        {t(locale, 'nav.templates')}
+      </a>
+      <a href={getLocalizedPath('/editor', locale)} class="bg-brand text-white px-4 py-2 rounded-lg hover:bg-brand-dark transition-colors">
+        {t(locale, 'nav.editor')}
+      </a>
+    </div>
+  </nav>
+</header>
