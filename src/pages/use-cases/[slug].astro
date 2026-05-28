@@ -1,41 +1,13 @@
 ---
-// src/pages/use-cases/[slug].astro — 用途落地页（如 flowchart-maker）
+// src/pages/use-cases/[slug].astro — 用途落地页（Programmatic SEO）
 import LandingLayout from '../../layouts/LandingLayout.astro'
 import TemplateCard from '../../components/TemplateCard.astro'
 import Icon from '../../components/Icon.astro'
 import { getCollection } from 'astro:content'
+import { useCases } from '../../data/use-cases'
 import type { SeoMeta } from '../../utils/seo'
 
 export function getStaticPaths() {
-  const useCases = [
-    {
-      slug: 'flowchart-maker',
-      title: 'Free Online Flowchart Maker',
-      description: 'Create professional flowcharts and process diagrams online for free. No signup required. Export as PNG or SVG.',
-      keywords: ['flowchart maker', 'free flowchart tool', 'online flowchart', 'process diagram maker'],
-      category: 'flowchart',
-      content: 'Excalidraw Hub provides a powerful yet simple flowchart maker that lets you create professional process diagrams in minutes. Whether you need to document a business process, design a software architecture, or plan a project workflow, our tool has you covered.',
-      features: ['Drag-and-drop interface', 'Pre-built flowchart shapes', 'Export to PNG, SVG, or clipboard', 'No account required', 'Works offline'],
-    },
-    {
-      slug: 'mind-map-tool',
-      title: 'Free Online Mind Map Tool',
-      description: 'Brainstorm and organize ideas with our free online mind map tool. Create beautiful mind maps instantly.',
-      keywords: ['mind map tool', 'free mind map', 'online brainstorming', 'idea organizer'],
-      category: 'mindmap',
-      content: 'Organize your thoughts and ideas visually with Excalidraw Hub mind map tool. Perfect for brainstorming sessions, project planning, and study notes. Our hand-drawn style makes your mind maps unique and engaging.',
-      features: ['Infinite canvas', 'Hand-drawn aesthetic', 'Real-time collaboration', 'Multiple export formats', 'Template library'],
-    },
-    {
-      slug: 'wireframe-tool',
-      title: 'Free Online Wireframe Tool',
-      description: 'Design web and mobile wireframes online for free. Quick prototyping with no learning curve.',
-      keywords: ['wireframe tool', 'free wireframe', 'UI mockup tool', 'prototype design'],
-      category: 'wireframe',
-      content: 'Design web and mobile wireframes quickly with Excalidraw Hub. Our sketch-style wireframes are perfect for early-stage design discussions. Share ideas with your team without spending hours on pixel-perfect mockups.',
-      features: ['UI component library', 'Responsive design templates', 'Quick prototyping', 'Team sharing', 'Version history'],
-    },
-  ]
   return useCases.map((uc) => ({
     params: { slug: uc.slug },
     props: { useCase: uc },
@@ -70,6 +42,7 @@ const seo: SeoMeta = {
   <!-- 面包屑 -->
   <nav class="text-sm text-gray-500 mb-4">
     <a href="/" class="hover:text-brand">Home</a> /
+    <a href="/use-cases/free-online-whiteboard" class="hover:text-brand">Use Cases</a> /
     <span class="text-gray-900">{useCase.title}</span>
   </nav>
 
@@ -80,11 +53,11 @@ const seo: SeoMeta = {
 
   <!-- CTA -->
   <a href="/editor" class="inline-block bg-brand text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-brand-dark transition-colors mb-12">
-    Start Creating →
+    Start Creating Free →
   </a>
 
   <!-- 功能列表 -->
-  <h2 class="text-2xl font-bold text-gray-900 mb-4">Features</h2>
+  <h2 class="text-2xl font-bold text-gray-900 mb-4">Key Features</h2>
   <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-12">
     {useCase.features.map((f: string) => (
       <li class="flex items-center gap-2 text-gray-700">
@@ -95,7 +68,7 @@ const seo: SeoMeta = {
 
   <!-- 相关模板 -->
   {relatedTemplates.length > 0 && (
-    <section>
+    <section class="mb-12">
       <h2 class="text-2xl font-bold text-gray-900 mb-4">Related Templates</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {relatedTemplates.map((tpl) => (
@@ -104,4 +77,16 @@ const seo: SeoMeta = {
       </div>
     </section>
   )}
+
+  <!-- 内部链接（SEO 互链） -->
+  <section class="border-t pt-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-4">Explore More Tools</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {useCases.filter(uc => uc.slug !== useCase.slug).slice(0, 6).map((uc) => (
+        <a href={`/use-cases/${uc.slug}`} class="text-brand hover:underline text-sm">
+          {uc.title}
+        </a>
+      ))}
+    </div>
+  </section>
 </LandingLayout>
