@@ -2,6 +2,7 @@
 // src/pages/use-cases/[slug].astro — 用途落地页（如 flowchart-maker）
 import LandingLayout from '../../layouts/LandingLayout.astro'
 import TemplateCard from '../../components/TemplateCard.astro'
+import Icon from '../../components/Icon.astro'
 import { getCollection } from 'astro:content'
 import type { SeoMeta } from '../../utils/seo'
 
@@ -87,7 +88,7 @@ const seo: SeoMeta = {
   <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-12">
     {useCase.features.map((f: string) => (
       <li class="flex items-center gap-2 text-gray-700">
-        <span class="text-green-500">✓</span> {f}
+        <Icon name="check" size={16} class="text-green-500" /> {f}
       </li>
     ))}
   </ul>

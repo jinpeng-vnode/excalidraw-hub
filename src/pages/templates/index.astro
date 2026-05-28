@@ -2,6 +2,7 @@
 // src/pages/templates/index.astro — 模板分类总览页
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import TemplateCard from '../../components/TemplateCard.astro'
+import Icon from '../../components/Icon.astro'
 import { getCollection } from 'astro:content'
 import { categories } from '../../data/categories'
 import { buildItemListSchema } from '../../utils/seo'
@@ -24,8 +25,8 @@ const seo: SeoMeta = {
     <!-- 分类导航 -->
     <div class="flex gap-3 mb-8 flex-wrap">
       {categories.map((cat) => (
-        <a href={`/templates/${cat.slug}`} class="px-4 py-2 rounded-full border border-gray-200 hover:border-brand hover:text-brand transition-colors">
-          {cat.icon} {cat.name}
+        <a href={`/templates/${cat.slug}`} class="px-4 py-2 rounded-full border border-gray-200 hover:border-brand hover:text-brand transition-colors flex items-center gap-1">
+          <Icon name={cat.icon} size={16} /> {cat.name}
         </a>
       ))}
     </div>

@@ -1,6 +1,7 @@
 ---
 // src/pages/template/[slug].astro — 模板详情/落地页（Programmatic SEO 核心）
 import LandingLayout from '../../layouts/LandingLayout.astro'
+import Icon from '../../components/Icon.astro'
 import { getCollection } from 'astro:content'
 import { getCategoryById } from '../../data/categories'
 import type { SeoMeta } from '../../utils/seo'
@@ -49,14 +50,14 @@ const seo: SeoMeta = {
 
   <!-- 分类标签 -->
   {category && (
-    <span class="inline-block px-3 py-1 bg-brand/10 text-brand rounded-full text-sm mb-6">
-      {category.icon} {category.name}
+    <span class="inline-flex items-center gap-1 px-3 py-1 bg-brand/10 text-brand rounded-full text-sm mb-6">
+      <Icon name={category.icon} size={14} /> {category.name}
     </span>
   )}
 
   <!-- 模板预览占位 -->
   <div class="aspect-video bg-gray-100 rounded-xl border border-gray-200 flex items-center justify-center mb-8">
-    <span class="text-6xl text-gray-300">📋</span>
+    <Icon name="clipboard" size={64} class="text-gray-300" />
   </div>
 
   <!-- 描述文案（SEO 内容） -->
