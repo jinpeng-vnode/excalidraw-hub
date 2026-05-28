@@ -1,0 +1,103 @@
+---
+import LandingLayout from '../../layouts/LandingLayout.astro'
+import type { SeoMeta } from '../../utils/seo'
+
+const seo: SeoMeta = {
+  title: 'Excalidraw Tutorial: Master the Free Whiteboard Tool | Excalidraw Hub',
+  description: 'Complete Excalidraw tutorial for beginners. Learn drawing, shapes, text, collaboration, export, and advanced tips to create professional diagrams for free.',
+  keywords: ['excalidraw tutorial', 'excalidraw guide', 'how to use excalidraw', 'excalidraw tips', 'excalidraw for beginners'],
+  ogType: 'article',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    name: 'Excalidraw Tutorial: Master the Free Whiteboard Tool',
+    description: 'Complete Excalidraw tutorial for beginners.',
+    headline: 'Excalidraw Tutorial: Master the Free Whiteboard Tool',
+    author: { '@type': 'Organization', name: 'Excalidraw Hub' },
+    publisher: { '@type': 'Organization', name: 'Excalidraw Hub', url: 'https://draw.todonot.com' },
+    datePublished: '2026-05-28',
+    dateModified: '2026-05-28',
+    mainEntityOfPage: 'https://draw.todonot.com/blog/excalidraw-tutorial',
+  },
+}
+---
+
+<LandingLayout seo={seo}>
+  <h1 class="text-4xl font-bold text-gray-900 mb-6">Excalidraw Tutorial: Master the Free Whiteboard Tool</h1>
+  
+  <p class="text-lg text-gray-600 mb-8">Excalidraw is a free, open-source virtual whiteboard that creates beautiful hand-drawn style diagrams. This tutorial covers everything from basic drawing to advanced features, helping you become productive in minutes.</p>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">What Is Excalidraw?</h2>
+  <p class="text-gray-700 mb-4">Excalidraw is an open-source drawing tool that produces diagrams with a distinctive hand-drawn look. Unlike polished diagramming tools, Excalidraw's sketchy style makes diagrams feel informal and approachable — perfect for brainstorming, architecture discussions, and quick explanations.</p>
+  <p class="text-gray-700 mb-4">Excalidraw Hub builds on this foundation with templates, a curated experience, and easy access — all free and in your browser.</p>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">The Toolbar: Your Essential Tools</h2>
+  <p class="text-gray-700 mb-4">The toolbar contains everything you need:</p>
+  <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+    <li><strong>Selection (V)</strong> — Click to select, drag to multi-select, move and resize elements</li>
+    <li><strong>Rectangle (R)</strong> — Draw boxes for containers, cards, and UI elements</li>
+    <li><strong>Diamond (D)</strong> — Create decision nodes for flowcharts</li>
+    <li><strong>Ellipse (O)</strong> — Draw circles and ovals for states and entities</li>
+    <li><strong>Arrow (A)</strong> — Connect elements with directional arrows</li>
+    <li><strong>Line (L)</strong> — Draw straight or multi-point lines</li>
+    <li><strong>Pencil (P)</strong> — Freehand drawing for sketches and annotations</li>
+    <li><strong>Text (T)</strong> — Add labels, titles, and descriptions anywhere</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Essential Keyboard Shortcuts</h2>
+  <div class="overflow-x-auto mb-6">
+    <table class="w-full text-left border-collapse">
+      <thead>
+        <tr class="border-b-2 border-gray-200">
+          <th class="py-2 px-4 text-gray-800">Shortcut</th>
+          <th class="py-2 px-4 text-gray-800">Action</th>
+        </tr>
+      </thead>
+      <tbody class="text-gray-700">
+        <tr class="border-b border-gray-100"><td class="py-2 px-4">Ctrl+D</td><td class="py-2 px-4">Duplicate selected elements</td></tr>
+        <tr class="border-b border-gray-100"><td class="py-2 px-4">Ctrl+G</td><td class="py-2 px-4">Group elements together</td></tr>
+        <tr class="border-b border-gray-100"><td class="py-2 px-4">Ctrl+Shift+G</td><td class="py-2 px-4">Ungroup elements</td></tr>
+        <tr class="border-b border-gray-100"><td class="py-2 px-4">Ctrl+L</td><td class="py-2 px-4">Lock element position</td></tr>
+        <tr class="border-b border-gray-100"><td class="py-2 px-4">Alt+drag</td><td class="py-2 px-4">Duplicate while moving</td></tr>
+        <tr class="border-b border-gray-100"><td class="py-2 px-4">Scroll wheel</td><td class="py-2 px-4">Zoom in/out</td></tr>
+        <tr class="border-b border-gray-100"><td class="py-2 px-4">Space+drag</td><td class="py-2 px-4">Pan the canvas</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Creating Your First Diagram</h2>
+  <ol class="list-decimal list-inside space-y-3 text-gray-700 mb-6">
+    <li><strong>Plan your layout</strong> — Decide what elements you need and their rough positions.</li>
+    <li><strong>Draw shapes first</strong> — Create all containers and nodes before connecting them.</li>
+    <li><strong>Add connections</strong> — Use arrows to show relationships and flow direction.</li>
+    <li><strong>Label everything</strong> — Double-click shapes to add text inside them, or use the text tool for external labels.</li>
+    <li><strong>Style and color</strong> — Use the properties panel to change colors, stroke width, and fill patterns.</li>
+    <li><strong>Align and distribute</strong> — Select multiple elements and use alignment tools for a clean layout.</li>
+  </ol>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Advanced Tips</h2>
+  <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+    <li><strong>Arrow binding</strong> — Arrows automatically snap to shape edges. Drag from the center of a shape to create bound arrows that follow when you move shapes.</li>
+    <li><strong>Libraries</strong> — Save frequently used element groups as library items for quick reuse.</li>
+    <li><strong>Frames</strong> — Use frames to organize sections of your canvas and export specific areas.</li>
+    <li><strong>Dark mode</strong> — Toggle dark mode for comfortable late-night diagramming.</li>
+    <li><strong>Grid mode</strong> — Enable grid for precise alignment in technical diagrams.</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Exporting Your Work</h2>
+  <p class="text-gray-700 mb-4">Excalidraw supports multiple export formats:</p>
+  <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+    <li><strong>PNG</strong> — Best for presentations, documents, and sharing on chat</li>
+    <li><strong>SVG</strong> — Scalable vector format, ideal for documentation and websites</li>
+    <li><strong>.excalidraw</strong> — Native format that preserves editability for future changes</li>
+    <li><strong>Clipboard</strong> — Copy directly to paste into other applications</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Start Practicing</h2>
+  <p class="text-gray-700 mb-4">The best way to learn Excalidraw is hands-on practice. Try recreating a simple flowchart or system diagram you've seen before. Within 15 minutes, you'll feel comfortable with the core tools.</p>
+
+  <div class="mt-10 p-6 bg-brand/5 rounded-lg text-center">
+    <p class="text-lg font-medium text-gray-800 mb-3">Practice what you've learned</p>
+    <a href="/editor" class="inline-block bg-brand text-white px-6 py-2 rounded-lg hover:bg-brand-dark transition-colors">Open Excalidraw Editor →</a>
+  </div>
+</LandingLayout>

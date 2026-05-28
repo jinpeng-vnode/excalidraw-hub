@@ -1,0 +1,72 @@
+---
+import LandingLayout from '../../layouts/LandingLayout.astro'
+import type { SeoMeta } from '../../utils/seo'
+
+const seo: SeoMeta = {
+  title: 'How to Use an Online Whiteboard: Complete Guide 2026 | Excalidraw Hub',
+  description: 'Learn how to use an online whiteboard for brainstorming, teaching, and collaboration. Step-by-step guide with tips for beginners and teams.',
+  keywords: ['online whiteboard', 'how to use whiteboard', 'digital whiteboard', 'virtual whiteboard', 'whiteboard tutorial'],
+  ogType: 'article',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    name: 'How to Use an Online Whiteboard: Complete Guide 2026',
+    description: 'Learn how to use an online whiteboard for brainstorming, teaching, and collaboration.',
+    headline: 'How to Use an Online Whiteboard: Complete Guide 2026',
+    author: { '@type': 'Organization', name: 'Excalidraw Hub' },
+    publisher: { '@type': 'Organization', name: 'Excalidraw Hub', url: 'https://draw.todonot.com' },
+    datePublished: '2026-05-28',
+    dateModified: '2026-05-28',
+    mainEntityOfPage: 'https://draw.todonot.com/blog/how-to-use-online-whiteboard',
+  },
+}
+---
+
+<LandingLayout seo={seo}>
+  <h1 class="text-4xl font-bold text-gray-900 mb-6">How to Use an Online Whiteboard: Complete Guide 2026</h1>
+  
+  <p class="text-lg text-gray-600 mb-8">Online whiteboards have transformed how we brainstorm, teach, and collaborate. Whether you're a student, teacher, or remote worker, mastering a digital whiteboard can dramatically improve your productivity and communication.</p>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">What Is an Online Whiteboard?</h2>
+  <p class="text-gray-700 mb-4">An online whiteboard is a digital canvas that lets you draw, write, and collaborate in real-time from any device with a browser. Unlike physical whiteboards, digital versions offer unlimited space, easy sharing, and persistent storage of your work.</p>
+  <p class="text-gray-700 mb-4">Tools like Excalidraw Hub provide a free, open-source whiteboard experience with a hand-drawn aesthetic that makes diagrams feel natural and approachable.</p>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Getting Started: Step-by-Step</h2>
+  <ol class="list-decimal list-inside space-y-3 text-gray-700 mb-6">
+    <li><strong>Open the whiteboard</strong> — Navigate to <a href="/editor" class="text-brand hover:underline">Excalidraw Hub Editor</a> in your browser. No sign-up required.</li>
+    <li><strong>Choose your tool</strong> — Select from shapes (rectangles, circles, arrows), freehand drawing, or text tools from the toolbar.</li>
+    <li><strong>Draw and arrange</strong> — Click and drag to create elements. Use the selection tool to move, resize, or group objects.</li>
+    <li><strong>Add text and labels</strong> — Double-click anywhere to add text. Use it for annotations, titles, or descriptions.</li>
+    <li><strong>Export or share</strong> — Save your work as PNG, SVG, or share a live collaboration link with your team.</li>
+  </ol>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Best Use Cases for Online Whiteboards</h2>
+  <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+    <li><strong>Brainstorming sessions</strong> — Capture ideas visually with sticky notes, mind maps, and freeform sketches.</li>
+    <li><strong>Teaching and tutoring</strong> — Explain concepts with diagrams, annotate documents, and engage students interactively.</li>
+    <li><strong>Project planning</strong> — Create flowcharts, Kanban boards, and timelines to organize tasks.</li>
+    <li><strong>Remote meetings</strong> — Replace boring slide decks with interactive visual collaboration.</li>
+    <li><strong>UX/UI design</strong> — Sketch wireframes and user flows before committing to high-fidelity designs.</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Tips for Effective Whiteboard Use</h2>
+  <p class="text-gray-700 mb-4">To get the most out of your online whiteboard experience:</p>
+  <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+    <li>Use colors to categorize and prioritize ideas</li>
+    <li>Keep your canvas organized with frames or sections</li>
+    <li>Use templates to save time on recurring tasks</li>
+    <li>Enable grid snapping for cleaner diagrams</li>
+    <li>Practice keyboard shortcuts to speed up your workflow</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Why Choose Excalidraw Hub?</h2>
+  <p class="text-gray-700 mb-4">Excalidraw Hub offers a unique hand-drawn style that makes your diagrams stand out. It's completely free, works in any browser, requires no account, and supports real-time collaboration. With our template library, you can start creating professional diagrams in seconds.</p>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Conclusion</h2>
+  <p class="text-gray-700 mb-4">Online whiteboards are essential tools for modern work and learning. Start with simple sketches, explore templates, and gradually incorporate whiteboarding into your daily workflow. The more you use it, the more natural visual thinking becomes.</p>
+
+  <div class="mt-10 p-6 bg-brand/5 rounded-lg text-center">
+    <p class="text-lg font-medium text-gray-800 mb-3">Ready to start whiteboarding?</p>
+    <a href="/editor" class="inline-block bg-brand text-white px-6 py-2 rounded-lg hover:bg-brand-dark transition-colors">Open Excalidraw Hub →</a>
+  </div>
+</LandingLayout>
