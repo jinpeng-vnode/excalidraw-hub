@@ -1,0 +1,18 @@
+---
+// src/pages/editor.astro — 白板编辑器页面
+import EditorLayout from '../layouts/EditorLayout.astro'
+import ExcalidrawEditor from '../components/react/ExcalidrawEditor'
+import type { SeoMeta } from '../utils/seo'
+
+const seo: SeoMeta = {
+  title: 'Online Whiteboard Editor - Excalidraw Hub',
+  description: 'Free online whiteboard editor. Draw, sketch, and collaborate in real-time.',
+  keywords: ['whiteboard editor', 'online drawing', 'excalidraw', 'free whiteboard'],
+}
+---
+
+<EditorLayout seo={seo}>
+  <div class="h-screen w-full">
+    <ExcalidrawEditor client:only="react" locale="en" />
+  </div>
+</EditorLayout>
