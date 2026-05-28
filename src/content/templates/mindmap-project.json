@@ -1,0 +1,24 @@
+{
+  "slug": "mindmap-project",
+  "title": "Project Mind Map",
+  "description": "Organize your project ideas, tasks, and milestones with this mind map template.",
+  "category": "mindmap",
+  "tags": ["mindmap", "project", "planning", "brainstorm"],
+  "seoTitle": "Free Project Mind Map Template - Brainstorm & Plan Online",
+  "seoDescription": "Plan your next project with this free mind map template. Organize ideas, set milestones, and brainstorm collaboratively online.",
+  "keywords": ["mind map template", "project planning", "brainstorm tool", "free mind map"],
+  "excalidrawData": {
+    "type": "excalidraw",
+    "version": 2,
+    "elements": [
+      {"type": "ellipse", "x": 300, "y": 250, "width": 160, "height": 80, "strokeColor": "#1e1e1e", "backgroundColor": "#a5d8ff", "label": {"text": "Project"}},
+      {"type": "rectangle", "x": 100, "y": 100, "width": 120, "height": 50, "strokeColor": "#1e1e1e", "backgroundColor": "#b2f2bb", "label": {"text": "Goals"}},
+      {"type": "rectangle", "x": 500, "y": 100, "width": 120, "height": 50, "strokeColor": "#1e1e1e", "backgroundColor": "#ffec99", "label": {"text": "Tasks"}},
+      {"type": "rectangle", "x": 100, "y": 400, "width": 120, "height": 50, "strokeColor": "#1e1e1e", "backgroundColor": "#ffc9c9", "label": {"text": "Timeline"}},
+      {"type": "rectangle", "x": 500, "y": 400, "width": 120, "height": 50, "strokeColor": "#1e1e1e", "backgroundColor": "#d0bfff", "label": {"text": "Resources"}}
+    ]
+  },
+  "locale": "en",
+  "createdAt": "2024-01-02",
+  "updatedAt": "2024-01-02"
+}
