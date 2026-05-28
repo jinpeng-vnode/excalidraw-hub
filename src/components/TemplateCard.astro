@@ -1,0 +1,23 @@
+---
+// src/components/TemplateCard.astro — 模板卡片（列表页用）
+interface Props {
+  title: string
+  description: string
+  slug: string
+  category: string
+}
+
+const { title, description, slug, category } = Astro.props
+---
+
+<a href={`/template/${slug}`} class="block group rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+  <!-- 缩略图占位 -->
+  <div class="aspect-video bg-gray-100 flex items-center justify-center">
+    <span class="text-4xl text-gray-300">📋</span>
+  </div>
+  <div class="p-4">
+    <span class="text-xs text-brand font-medium uppercase">{category}</span>
+    <h3 class="font-semibold text-gray-900 mt-1 group-hover:text-brand transition-colors">{title}</h3>
+    <p class="text-sm text-gray-500 mt-1 line-clamp-2">{description}</p>
+  </div>
+</a>

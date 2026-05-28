@@ -1,0 +1,25 @@
+---
+// src/layouts/EditorLayout.astro — 编辑器全屏布局
+import type { SeoMeta } from '../utils/seo'
+import SeoHead from '../components/SeoHead.astro'
+import '../styles/global.css'
+
+interface Props {
+  seo: SeoMeta
+}
+
+const { seo } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang={Astro.currentLocale ?? 'en'}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <SeoHead seo={seo} />
+</head>
+<body class="h-screen overflow-hidden">
+  <slot />
+</body>
+</html>

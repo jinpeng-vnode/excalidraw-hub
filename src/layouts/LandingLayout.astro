@@ -1,0 +1,40 @@
+---
+// src/layouts/LandingLayout.astro — 落地页布局（Programmatic SEO）
+import SeoHead from '../components/SeoHead.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import AdSlot from '../components/AdSlot.astro'
+import type { SeoMeta } from '../utils/seo'
+import '../styles/global.css'
+
+interface Props {
+  seo: SeoMeta
+}
+
+const { seo } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang={Astro.currentLocale ?? 'en'}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <SeoHead seo={seo} />
+</head>
+<body class="min-h-screen flex flex-col">
+  <Header />
+  <main class="flex-1 max-w-7xl mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8">
+      <article>
+        <slot />
+      </article>
+      <aside class="hidden lg:block">
+        <AdSlot slot="sidebar" />
+      </aside>
+    </div>
+  </main>
+  <AdSlot slot="footer" />
+  <Footer />
+</body>
+</html>
