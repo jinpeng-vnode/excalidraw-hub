@@ -34,7 +34,7 @@ excalidraw-hub
 ├── 部署与基础设施
 │   ├── Docker 容器化配置 — ✅
 │   ├── Nginx 静态托管 — ✅
-│   └── Mac Mini 部署 — ❌
+│   └── Mac Mini 部署 — ✅
 └── 待完成
     └── 架构设计方案 — ✅
 ```
