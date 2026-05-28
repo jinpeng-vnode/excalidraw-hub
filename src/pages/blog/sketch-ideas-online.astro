@@ -1,0 +1,110 @@
+---
+import LandingLayout from '../../layouts/LandingLayout.astro'
+import type { SeoMeta } from '../../utils/seo'
+
+const seo: SeoMeta = {
+  title: 'Sketch Ideas Online: Free Digital Sketching Tools & Tips | Excalidraw Hub',
+  description: 'Sketch ideas online with free digital tools. Learn techniques for quick concept sketching, visual thinking, and turning rough ideas into clear visual communications.',
+  keywords: ['sketch ideas online', 'digital sketching', 'online sketch tool', 'visual thinking', 'concept sketching', 'quick sketch'],
+  ogType: 'article',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    name: 'Sketch Ideas Online: Free Digital Sketching Tools & Tips',
+    description: 'Sketch ideas online with free digital tools.',
+    headline: 'Sketch Ideas Online: Free Digital Sketching Tools & Tips',
+    author: { '@type': 'Organization', name: 'Excalidraw Hub' },
+    publisher: { '@type': 'Organization', name: 'Excalidraw Hub', url: 'https://draw.todonot.com' },
+    datePublished: '2026-05-28',
+    dateModified: '2026-05-28',
+    mainEntityOfPage: 'https://draw.todonot.com/blog/sketch-ideas-online',
+  },
+}
+---
+
+<LandingLayout seo={seo}>
+  <h1 class="text-4xl font-bold text-gray-900 mb-6">Sketch Ideas Online: Free Digital Sketching Tools & Tips</h1>
+  
+  <p class="text-lg text-gray-600 mb-8">The fastest way to communicate an idea is to sketch it. Digital sketching tools let you capture concepts, explain solutions, and think visually — all from your browser. No artistic skill required.</p>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Why Sketch Your Ideas?</h2>
+  <p class="text-gray-700 mb-4">Sketching isn't about creating art — it's about thinking visually. Research shows that visual communication is processed 60,000 times faster than text. When you sketch an idea:</p>
+  <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+    <li>You clarify your own thinking by forcing abstract concepts into concrete shapes</li>
+    <li>Others understand your idea immediately without lengthy explanations</li>
+    <li>Feedback becomes specific ("move this here") instead of vague ("I don't get it")</li>
+    <li>You can iterate rapidly — redraw in seconds what would take paragraphs to rewrite</li>
+    <li>Visual records are more memorable than meeting notes</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Types of Idea Sketches</h2>
+  <ul class="list-disc list-inside space-y-3 text-gray-700 mb-6">
+    <li><strong>Concept sketches</strong> — Quick drawings that capture the essence of an idea. A few boxes and arrows showing how something works.</li>
+    <li><strong>Storyboards</strong> — Sequential frames showing a user journey or process over time.</li>
+    <li><strong>Comparison sketches</strong> — Side-by-side drawings of different approaches to the same problem.</li>
+    <li><strong>Annotation sketches</strong> — Screenshots or images with hand-drawn notes, arrows, and highlights.</li>
+    <li><strong>Architecture sketches</strong> — System components and their relationships drawn informally.</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Digital Sketching Techniques</h2>
+  <ol class="list-decimal list-inside space-y-3 text-gray-700 mb-6">
+    <li><strong>Start with big shapes</strong> — Draw the main containers first. Details come later.</li>
+    <li><strong>Use simple icons</strong> — A stick figure represents a user. A cloud represents the internet. A cylinder represents a database. Everyone understands these.</li>
+    <li><strong>Add arrows for flow</strong> — Show direction, causation, and sequence with arrows.</li>
+    <li><strong>Label everything</strong> — A box without a label is meaningless. Even one word makes it clear.</li>
+    <li><strong>Use color sparingly</strong> — One or two highlight colors to draw attention to key elements.</li>
+    <li><strong>Embrace imperfection</strong> — Wobbly lines signal "this is a draft" and invite collaboration.</li>
+  </ol>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">When to Sketch vs. When to Write</h2>
+  <div class="overflow-x-auto mb-6">
+    <table class="w-full text-left border-collapse">
+      <thead>
+        <tr class="border-b-2 border-gray-200">
+          <th class="py-3 px-4 text-gray-800">Sketch When...</th>
+          <th class="py-3 px-4 text-gray-800">Write When...</th>
+        </tr>
+      </thead>
+      <tbody class="text-gray-700">
+        <tr class="border-b border-gray-100">
+          <td class="py-3 px-4">Explaining spatial relationships</td>
+          <td class="py-3 px-4">Documenting exact specifications</td>
+        </tr>
+        <tr class="border-b border-gray-100">
+          <td class="py-3 px-4">Showing how things connect</td>
+          <td class="py-3 px-4">Listing sequential steps</td>
+        </tr>
+        <tr class="border-b border-gray-100">
+          <td class="py-3 px-4">Comparing visual options</td>
+          <td class="py-3 px-4">Defining business rules</td>
+        </tr>
+        <tr class="border-b border-gray-100">
+          <td class="py-3 px-4">Brainstorming possibilities</td>
+          <td class="py-3 px-4">Recording decisions and rationale</td>
+        </tr>
+        <tr class="border-b border-gray-100">
+          <td class="py-3 px-4">Explaining to non-technical people</td>
+          <td class="py-3 px-4">Writing API documentation</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Building a Sketching Habit</h2>
+  <p class="text-gray-700 mb-4">You don't need to be an artist to sketch effectively. Start with these habits:</p>
+  <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+    <li>Before your next meeting, sketch the agenda as a visual map</li>
+    <li>When explaining something in chat, add a quick sketch instead of a wall of text</li>
+    <li>During code reviews, sketch the architecture to understand the change</li>
+    <li>At the start of any project, sketch the user journey before writing requirements</li>
+    <li>Keep a "sketch journal" — one quick sketch per day of something you learned</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Why Excalidraw Hub for Sketching Ideas</h2>
+  <p class="text-gray-700 mb-4">Excalidraw Hub was designed for exactly this use case — quick, informal visual communication. The hand-drawn rendering style means your sketches look intentionally rough, removing any pressure to make things "look good." Open the editor, sketch your idea in 30 seconds, and share the link. That's it.</p>
+
+  <div class="mt-10 p-6 bg-brand/5 rounded-lg text-center">
+    <p class="text-lg font-medium text-gray-800 mb-3">Sketch your next idea in seconds</p>
+    <a href="/editor" class="inline-block bg-brand text-white px-6 py-2 rounded-lg hover:bg-brand-dark transition-colors">Open Sketch Tool →</a>
+  </div>
+</LandingLayout>

@@ -1,0 +1,78 @@
+---
+import LandingLayout from '../../layouts/LandingLayout.astro'
+import type { SeoMeta } from '../../utils/seo'
+
+const seo: SeoMeta = {
+  title: 'Wireframe Design Online: Free Tools & Best Practices | Excalidraw Hub',
+  description: 'Learn wireframe design online with free tools. Complete guide to creating low-fidelity and high-fidelity wireframes for web and mobile apps without software installation.',
+  keywords: ['wireframe design online', 'free wireframe tool', 'wireframe maker', 'UI wireframe', 'web wireframe', 'mobile wireframe'],
+  ogType: 'article',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    name: 'Wireframe Design Online: Free Tools & Best Practices',
+    description: 'Learn wireframe design online with free tools.',
+    headline: 'Wireframe Design Online: Free Tools & Best Practices',
+    author: { '@type': 'Organization', name: 'Excalidraw Hub' },
+    publisher: { '@type': 'Organization', name: 'Excalidraw Hub', url: 'https://draw.todonot.com' },
+    datePublished: '2026-05-28',
+    dateModified: '2026-05-28',
+    mainEntityOfPage: 'https://draw.todonot.com/blog/wireframe-design-online',
+  },
+}
+---
+
+<LandingLayout seo={seo}>
+  <h1 class="text-4xl font-bold text-gray-900 mb-6">Wireframe Design Online: Free Tools & Best Practices</h1>
+  
+  <p class="text-lg text-gray-600 mb-8">Wireframing is the foundation of good UI/UX design. Before writing code or creating pixel-perfect mockups, wireframes help you validate layout, navigation, and user flow. With online tools, you can wireframe from any device without installing software.</p>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">What Is a Wireframe?</h2>
+  <p class="text-gray-700 mb-4">A wireframe is a low-fidelity visual representation of a user interface. It shows the structure and layout of a page without colors, images, or detailed styling. Think of it as the blueprint of a building — it defines where things go before you decide how they look.</p>
+  <p class="text-gray-700 mb-4">Wireframes typically include: page layout and grid structure, navigation placement, content hierarchy, interactive element positions (buttons, forms, links), and annotations explaining behavior.</p>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Wireframe Fidelity Levels</h2>
+  <ul class="list-disc list-inside space-y-3 text-gray-700 mb-6">
+    <li><strong>Low-fidelity (sketches)</strong> — Quick hand-drawn boxes and lines. Best for early brainstorming and exploring multiple layout options fast. This is where Excalidraw Hub excels.</li>
+    <li><strong>Mid-fidelity</strong> — More defined structure with placeholder text, approximate sizing, and basic annotations. Good for team discussions and stakeholder alignment.</li>
+    <li><strong>High-fidelity</strong> — Detailed layouts with real content, exact spacing, and interaction notes. Used as developer handoff documentation.</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Essential Wireframe Components</h2>
+  <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+    <li><strong>Header/Navigation</strong> — Logo placement, menu items, search bar, user actions</li>
+    <li><strong>Content areas</strong> — Text blocks, image placeholders, card layouts</li>
+    <li><strong>Sidebar</strong> — Secondary navigation, filters, related content</li>
+    <li><strong>Forms</strong> — Input fields, labels, validation messages, submit buttons</li>
+    <li><strong>Footer</strong> — Links, copyright, contact information</li>
+    <li><strong>Modals/Overlays</strong> — Confirmation dialogs, detail views, notifications</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Wireframing Best Practices</h2>
+  <ol class="list-decimal list-inside space-y-3 text-gray-700 mb-6">
+    <li><strong>Start with user goals</strong> — What does the user want to accomplish on this page? Design the layout to support that goal.</li>
+    <li><strong>Use real content sizes</strong> — Don't use "Lorem ipsum" for headlines. Use realistic text lengths to catch layout issues early.</li>
+    <li><strong>Design mobile first</strong> — Start with the smallest screen, then expand. This forces you to prioritize content.</li>
+    <li><strong>Keep it grayscale</strong> — Avoid colors in wireframes. They distract from layout and hierarchy decisions.</li>
+    <li><strong>Annotate interactions</strong> — Note what happens on click, hover, scroll. Wireframes should communicate behavior, not just appearance.</li>
+    <li><strong>Show all states</strong> — Empty states, loading states, error states, and success states all need wireframes.</li>
+    <li><strong>Get feedback early</strong> — Share wireframes before investing in high-fidelity design. Changes are cheap at this stage.</li>
+  </ol>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Common Wireframe Patterns</h2>
+  <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+    <li><strong>F-pattern layout</strong> — Primary content top-left, secondary content below and right</li>
+    <li><strong>Z-pattern layout</strong> — Eye moves in Z shape: logo → nav → content → CTA</li>
+    <li><strong>Card grid</strong> — Equal-sized cards in a responsive grid for listings</li>
+    <li><strong>Split screen</strong> — Two equal columns for comparison or dual-purpose pages</li>
+    <li><strong>Single column</strong> — Focused content flow for articles, forms, and onboarding</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Why Excalidraw Hub for Wireframing</h2>
+  <p class="text-gray-700 mb-4">Excalidraw Hub's hand-drawn style is intentionally imperfect — which is exactly what you want in wireframes. The sketchy look signals "this is a draft" to stakeholders, inviting feedback rather than pixel-level critique. Combined with infinite canvas, real-time collaboration, and zero setup, it's the fastest way to go from idea to wireframe.</p>
+
+  <div class="mt-10 p-6 bg-brand/5 rounded-lg text-center">
+    <p class="text-lg font-medium text-gray-800 mb-3">Start wireframing your next project</p>
+    <a href="/editor" class="inline-block bg-brand text-white px-6 py-2 rounded-lg hover:bg-brand-dark transition-colors">Open Wireframe Tool →</a>
+  </div>
+</LandingLayout>

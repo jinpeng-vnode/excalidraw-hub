@@ -1,0 +1,80 @@
+---
+import LandingLayout from '../../layouts/LandingLayout.astro'
+import type { SeoMeta } from '../../utils/seo'
+
+const seo: SeoMeta = {
+  title: 'Flowchart Creation Tips: Design Clear Process Diagrams | Excalidraw Hub',
+  description: 'Master flowchart creation with proven tips. Learn symbols, best practices, and common mistakes to avoid when designing process diagrams and decision trees.',
+  keywords: ['flowchart creation', 'flowchart tips', 'how to make flowchart', 'process diagram', 'flowchart symbols', 'decision tree'],
+  ogType: 'article',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    name: 'Flowchart Creation Tips: Design Clear Process Diagrams',
+    description: 'Master flowchart creation with proven tips.',
+    headline: 'Flowchart Creation Tips: Design Clear Process Diagrams',
+    author: { '@type': 'Organization', name: 'Excalidraw Hub' },
+    publisher: { '@type': 'Organization', name: 'Excalidraw Hub', url: 'https://draw.todonot.com' },
+    datePublished: '2026-05-28',
+    dateModified: '2026-05-28',
+    mainEntityOfPage: 'https://draw.todonot.com/blog/flowchart-creation-tips',
+  },
+}
+---
+
+<LandingLayout seo={seo}>
+  <h1 class="text-4xl font-bold text-gray-900 mb-6">Flowchart Creation Tips: Design Clear Process Diagrams</h1>
+  
+  <p class="text-lg text-gray-600 mb-8">Flowcharts are the most widely used diagram type in business and technology. A well-designed flowchart can explain a complex process in seconds. Here are proven tips to create flowcharts that are clear, professional, and actually useful.</p>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Standard Flowchart Symbols</h2>
+  <p class="text-gray-700 mb-4">Using standard symbols ensures your flowchart is universally understood:</p>
+  <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+    <li><strong>Rectangle</strong> — Process step or action ("Send email", "Calculate total")</li>
+    <li><strong>Diamond</strong> — Decision point with Yes/No or True/False branches</li>
+    <li><strong>Oval/Rounded rectangle</strong> — Start and end points of the process</li>
+    <li><strong>Parallelogram</strong> — Input or output (data entry, display result)</li>
+    <li><strong>Arrow</strong> — Flow direction connecting steps</li>
+    <li><strong>Circle</strong> — Connector for flows that continue on another page</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">10 Tips for Better Flowcharts</h2>
+  <ol class="list-decimal list-inside space-y-3 text-gray-700 mb-6">
+    <li><strong>Start with the end in mind</strong> — Define the process boundaries before drawing. What triggers the start? What marks completion?</li>
+    <li><strong>Flow top-to-bottom or left-to-right</strong> — Pick one direction and stick with it. Mixing directions confuses readers.</li>
+    <li><strong>One action per box</strong> — Each rectangle should contain a single, clear action. If you need "and" in a step, split it into two.</li>
+    <li><strong>Label every decision branch</strong> — Always mark Yes/No or the condition on each path leaving a diamond.</li>
+    <li><strong>Keep text concise</strong> — Use verb-noun phrases: "Validate input", "Send notification", "Update database".</li>
+    <li><strong>Limit to one page</strong> — If your flowchart doesn't fit on one screen, break it into sub-processes.</li>
+    <li><strong>Use consistent sizing</strong> — All rectangles should be the same size, all diamonds the same size.</li>
+    <li><strong>Avoid crossing lines</strong> — Rearrange elements to eliminate line crossings. Use connectors if unavoidable.</li>
+    <li><strong>Color with purpose</strong> — Use color to highlight the happy path, error paths, or different departments.</li>
+    <li><strong>Test with someone else</strong> — If a colleague can't follow your flowchart without explanation, simplify it.</li>
+  </ol>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Common Flowchart Mistakes</h2>
+  <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+    <li><strong>Too much detail</strong> — A flowchart should show the process, not every micro-step. Save details for documentation.</li>
+    <li><strong>Missing end points</strong> — Every path must terminate. Dangling arrows confuse readers.</li>
+    <li><strong>Inconsistent granularity</strong> — Don't mix high-level steps ("Process order") with low-level ones ("Click submit button").</li>
+    <li><strong>No decision labels</strong> — Unlabeled branches force readers to guess which path is which.</li>
+    <li><strong>Infinite loops</strong> — Ensure every loop has an exit condition clearly marked.</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Flowchart Use Cases</h2>
+  <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+    <li><strong>Software development</strong> — Algorithm logic, user authentication flows, API request handling</li>
+    <li><strong>Business processes</strong> — Order fulfillment, employee onboarding, approval workflows</li>
+    <li><strong>Troubleshooting</strong> — IT support decision trees, debugging guides</li>
+    <li><strong>Quality assurance</strong> — Test case flows, bug triage processes</li>
+    <li><strong>Education</strong> — Scientific method steps, math problem-solving approaches</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Creating Flowcharts with Excalidraw Hub</h2>
+  <p class="text-gray-700 mb-4">Excalidraw Hub makes flowchart creation fast and intuitive. Use the rectangle tool (R) for process steps, diamond tool (D) for decisions, and arrow tool (A) to connect them. The hand-drawn style keeps flowcharts looking approachable — perfect for team discussions where you want feedback, not just approval.</p>
+
+  <div class="mt-10 p-6 bg-brand/5 rounded-lg text-center">
+    <p class="text-lg font-medium text-gray-800 mb-3">Create a flowchart in minutes</p>
+    <a href="/editor" class="inline-block bg-brand text-white px-6 py-2 rounded-lg hover:bg-brand-dark transition-colors">Open Flowchart Maker →</a>
+  </div>
+</LandingLayout>
