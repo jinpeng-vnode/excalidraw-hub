@@ -1,5 +1,6 @@
 // src/components/react/ExcalidrawEditor.tsx — Excalidraw 编辑器封装
 import { useState, useEffect } from 'react'
+import '@excalidraw/excalidraw/index.css'
 
 export interface EditorProps {
   initialData?: object
