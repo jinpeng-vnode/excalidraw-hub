@@ -1,0 +1,43 @@
+---
+// src/components/SeoHead.astro — SEO 元标签统一组件
+import type { SeoMeta } from '../utils/seo'
+
+interface Props {
+  seo: SeoMeta
+}
+
+const { seo } = Astro.props
+const site = 'https://excalidraw-hub.com'
+const ogImage = seo.ogImage ?? `${site}/favicon.svg`
+const canonical = seo.canonical ?? Astro.url.href
+---
+
+<!-- 基础 SEO -->
+<title>{seo.title}</title>
+<meta name="description" content={seo.description} />
+{seo.keywords && <meta name="keywords" content={seo.keywords.join(', ')} />}
+<link rel="canonical" href={canonical} />
+
+<!-- Open Graph -->
+<meta property="og:title" content={seo.title} />
+<meta property="og:description" content={seo.description} />
+<meta property="og:type" content={seo.ogType ?? 'website'} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:url" content={canonical} />
+<meta property="og:site_name" content="Excalidraw Hub" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={seo.title} />
+<meta name="twitter:description" content={seo.description} />
+<meta name="twitter:image" content={ogImage} />
+
+<!-- hreflang 多语言 -->
+{seo.hreflang?.map(({ lang, url }) => (
+  <link rel="alternate" hreflang={lang} href={url} />
+))}
+
+<!-- Schema.org 结构化数据 -->
+{seo.schema && (
+  <script type="application/ld+json" set:html={JSON.stringify(seo.schema)} />
+)}
